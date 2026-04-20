@@ -228,6 +228,28 @@ export default function NetSalaryPage() {
         </div>
       )}
 
+
+      <section className="mt-12 mb-4">
+        <h2 className="text-xl font-bold mb-4">실수령액 FAQ</h2>
+        <div className="space-y-3">
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">4대보험이란 무엇인가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">국민연금(4.5%), 건강보험(3.545%), 장기요양보험(건강보험료의 12.95%), 고용보험(0.9%)을 말합니다. 직장인은 회사와 절반씩 부담합니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">소득세는 어떻게 계산되나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">근로소득공제 후 인적공제를 차감한 과세표준에 누진세율을 적용하고, 근로소득세액공제·표준세액공제를 빼서 산출합니다. 국세청 간이세액표 기준입니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">연봉과 실수령액 차이가 큰 이유는?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">4대보험(약 9%)과 소득세·지방소득세가 공제되기 때문입니다. 연봉 5,000만원 기준 월 실수령액은 약 350만원 수준입니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">부양가족 수에 따라 세금이 달라지나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">네, 부양가족 1인당 연 150만원의 인적공제가 적용됩니다. 부양가족이 많을수록 소득세가 줄어 실수령액이 높아집니다.</p>
+          </details>
+        </div>
+      </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -237,6 +259,7 @@ export default function NetSalaryPage() {
         operatingSystem: "All",
         offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       }) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "4대보험이란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "국민연금(4.5%), 건강보험(3.545%), 장기요양보험, 고용보험(0.9%)입니다. 직장인은 회사와 절반씩 부담합니다."}}, {"@type": "Question", "name": "부양가족 수에 따라 세금이 달라지나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 부양가족 1인당 연 150만원의 인적공제가 적용되어 소득세가 줄어듭니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>

@@ -130,6 +130,28 @@ export default function WeeklyHolidayPage() {
         </div>
       )}
 
+
+      <section className="mt-12 mb-4">
+        <h2 className="text-xl font-bold mb-4">주휴수당 FAQ</h2>
+        <div className="space-y-3">
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">주휴수당은 언제 발생하나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">1주 소정근로시간이 15시간 이상이고 그 주를 개근한 근로자에게 발생합니다. 결근이 있으면 주휴수당이 지급되지 않을 수 있습니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">주휴수당 계산법은?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">1일 소정근로시간 × 시급으로 계산합니다. 예를 들어 하루 8시간, 시급 1만원이면 주휴수당은 8만원입니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">알바 주휴수당 안 주면 위법인가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">네, 주 15시간 이상 개근한 근로자에게 주휴수당을 미지급하면 근로기준법 위반입니다. 노동청에 신고할 수 있습니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">주휴수당도 최저임금에 포함되나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">주휴수당을 포함해 최저임금 이상이 되어야 합니다. 실제 시급 계산 시 주휴수당을 고려해야 시급이 정확해집니다.</p>
+          </details>
+        </div>
+      </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -139,6 +161,7 @@ export default function WeeklyHolidayPage() {
         operatingSystem: "All",
         offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       }) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "주휴수당은 언제 발생하나요?", "acceptedAnswer": {"@type": "Answer", "text": "1주 소정근로시간이 15시간 이상이고 그 주를 개근한 근로자에게 발생합니다."}}, {"@type": "Question", "name": "주휴수당 계산법은?", "acceptedAnswer": {"@type": "Answer", "text": "1일 소정근로시간 × 시급으로 계산합니다. 하루 8시간, 시급 1만원이면 주휴수당은 8만원입니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>

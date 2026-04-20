@@ -138,6 +138,28 @@ export default function AnnualLeavePage() {
         </div>
       </section>
 
+
+      <section className="mt-12 mb-4">
+        <h2 className="text-xl font-bold mb-4">연차 FAQ</h2>
+        <div className="space-y-3">
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">입사 첫 해에도 연차가 생기나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">네, 1개월 개근 시 1일의 유급휴가가 발생합니다. 1년 미만 근무자는 최대 11일까지 월 단위로 연차가 쌓입니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">1년 개근하면 연차가 며칠인가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">1년 이상 근무 시 15일의 연차가 발생합니다. 3년 이상 근무하면 2년마다 1일씩 추가되어 최대 25일까지 늘어납니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">연차를 안 쓰면 수당으로 받을 수 있나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">사용하지 않은 연차는 연차수당으로 보상받을 수 있습니다. 단, 회사가 사용 촉진 조치를 한 경우에는 수당이 발생하지 않을 수 있습니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">계약직도 연차가 발생하나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">근로기준법 적용 대상이면 고용 형태와 무관하게 연차가 발생합니다. 주 15시간 미만 초단시간 근로자는 제외됩니다.</p>
+          </details>
+        </div>
+      </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -147,6 +169,7 @@ export default function AnnualLeavePage() {
         operatingSystem: "All",
         offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       }) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "입사 첫 해에도 연차가 생기나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 1개월 개근 시 1일의 유급휴가가 발생합니다. 1년 미만 최대 11일까지 쌓입니다."}}, {"@type": "Question", "name": "1년 개근하면 연차가 며칠인가요?", "acceptedAnswer": {"@type": "Answer", "text": "1년 이상 근무 시 15일, 3년 이상부터 2년마다 1일씩 추가되어 최대 25일입니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>

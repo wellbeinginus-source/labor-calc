@@ -190,6 +190,28 @@ export default function OvertimePage() {
         </div>
       </section>
 
+
+      <section className="mt-12 mb-4">
+        <h2 className="text-xl font-bold mb-4">연장·야간·휴일수당 FAQ</h2>
+        <div className="space-y-3">
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">연장근로는 몇 시간까지 가능한가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">법정 근로시간(주 40시간) 초과분이 연장근로입니다. 연장근로는 주 12시간을 초과할 수 없으며, 위반 시 사업주에게 벌칙이 부과됩니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">야간수당 기준 시간은?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">밤 10시부터 다음날 오전 6시 사이 근무가 야간근로입니다. 통상임금의 50%를 가산하여 지급해야 합니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">휴일에 일하면 수당이 얼마인가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">법정 휴일(공휴일·주휴일) 근무 시 8시간 이내는 통상임금의 50%, 8시간 초과분은 100% 가산됩니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">연장·야간이 겹치면 수당이 중복되나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">네, 연장근로이면서 야간근로에 해당하면 각각의 가산율이 중복 적용됩니다. 예를 들어 야간 연장근로는 통상임금의 100%(50%+50%) 가산입니다.</p>
+          </details>
+        </div>
+      </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -199,6 +221,7 @@ export default function OvertimePage() {
         operatingSystem: "All",
         offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       }) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "연장근로는 몇 시간까지 가능한가요?", "acceptedAnswer": {"@type": "Answer", "text": "연장근로는 주 12시간을 초과할 수 없습니다."}}, {"@type": "Question", "name": "야간수당 기준 시간은?", "acceptedAnswer": {"@type": "Answer", "text": "밤 10시부터 다음날 오전 6시 사이 근무가 야간근로로 통상임금의 50%를 가산합니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>

@@ -139,6 +139,28 @@ export default function InsurancePage() {
         </div>
       )}
 
+
+      <section className="mt-12 mb-4">
+        <h2 className="text-xl font-bold mb-4">4대보험 FAQ</h2>
+        <div className="space-y-3">
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">4대보험 요율은 매년 바뀌나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">요율은 매년 정부 고시로 결정됩니다. 2026년 기준 국민연금 4.5%, 건강보험 3.545%, 고용보험 0.9%이며 장기요양은 건강보험료의 12.95%입니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">사업주 부담분은 얼마인가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">직장인이 부담하는 금액과 거의 같은 수준을 회사가 추가로 부담합니다. 실제 회사 인건비는 명목 급여보다 약 10% 이상 높습니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">일용직도 4대보험에 가입해야 하나요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">1개월 이상, 월 8일 이상 근무하는 일용직은 고용보험·산재보험 가입이 의무입니다. 국민연금·건강보험은 조건이 다릅니다.</p>
+          </details>
+          <details className="border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 bg-white dark:bg-zinc-800">
+            <summary className="font-medium cursor-pointer">국민연금 상한액은 얼마인가요?</summary>
+            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">2026년 기준 국민연금 보험료 부과 기준 상한 소득은 월 617만원입니다. 이를 초과하는 급여는 보험료가 늘어나지 않습니다.</p>
+          </details>
+        </div>
+      </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -148,6 +170,7 @@ export default function InsurancePage() {
         operatingSystem: "All",
         offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       }) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "4대보험 요율은 매년 바뀌나요?", "acceptedAnswer": {"@type": "Answer", "text": "매년 정부 고시로 결정됩니다. 2026년 기준 국민연금 4.5%, 건강보험 3.545%, 고용보험 0.9%입니다."}}, {"@type": "Question", "name": "국민연금 상한액은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 기준 국민연금 보험료 부과 기준 상한 소득은 월 617만원입니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
