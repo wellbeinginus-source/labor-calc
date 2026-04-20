@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import KakaoAdFit from "@/components/KakaoAdFit";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 // 2025년 기준 요율
 const RATES_2025 = {
@@ -136,6 +138,9 @@ export default function InsurancePage() {
           </p>
         </div>
       )}
+
+      <KakaoAdFit unit="DAN-XXXXXXXXXX" width={320} height={100} />
+      <CoupangBanner />
     </>
   );
 }

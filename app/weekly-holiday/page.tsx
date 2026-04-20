@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import KakaoAdFit from "@/components/KakaoAdFit";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 export default function WeeklyHolidayPage() {
   const [hourlyWage, setHourlyWage] = useState("");
@@ -127,6 +129,9 @@ export default function WeeklyHolidayPage() {
           </p>
         </div>
       )}
+
+      <KakaoAdFit unit="DAN-XXXXXXXXXX" width={320} height={100} />
+      <CoupangBanner />
     </>
   );
 }

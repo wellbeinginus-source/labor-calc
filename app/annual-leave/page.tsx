@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import KakaoAdFit from "@/components/KakaoAdFit";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 interface LeaveResult {
   yearsWorked: number;
@@ -135,6 +137,9 @@ export default function AnnualLeavePage() {
           <p><strong>3년 이상:</strong> 2년마다 1일 추가 (최대 25일)</p>
         </div>
       </section>
+
+      <KakaoAdFit unit="DAN-XXXXXXXXXX" width={320} height={100} />
+      <CoupangBanner />
     </>
   );
 }

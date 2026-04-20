@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { Metadata } from "next";
+import KakaoAdFit from "@/components/KakaoAdFit";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 export default function SeverancePage() {
   const [startDate, setStartDate] = useState("");
@@ -131,6 +132,9 @@ export default function SeverancePage() {
           </p>
         </div>
       )}
+
+      <KakaoAdFit unit="DAN-XXXXXXXXXX" width={320} height={100} />
+      <CoupangBanner />
     </>
   );
 }

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import KakaoAdFit from "@/components/KakaoAdFit";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 export default function OvertimePage() {
   const [hourlyWage, setHourlyWage] = useState("");
@@ -187,6 +189,9 @@ export default function OvertimePage() {
           <p><strong>중복 할증:</strong> 야간 + 연장이 겹치면 각각 적용 (예: ×2.0)</p>
         </div>
       </section>
+
+      <KakaoAdFit unit="DAN-XXXXXXXXXX" width={320} height={100} />
+      <CoupangBanner />
     </>
   );
 }
