@@ -133,7 +133,16 @@ export default function SeverancePage() {
         </div>
       )}
 
-      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "퇴직금 계산기",
+        description: "입사일·퇴사일·평균임금으로 퇴직금을 자동 계산합니다.",
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "All",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      }) }} />
+            <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
   );

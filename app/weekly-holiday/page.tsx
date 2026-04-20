@@ -130,7 +130,16 @@ export default function WeeklyHolidayPage() {
         </div>
       )}
 
-      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "주휴수당 계산기",
+        description: "주간 근무시간 기준 주휴수당을 자동 계산합니다.",
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "All",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      }) }} />
+            <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
   );

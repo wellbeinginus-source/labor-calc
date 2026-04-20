@@ -190,7 +190,16 @@ export default function OvertimePage() {
         </div>
       </section>
 
-      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "연장근로수당 계산기",
+        description: "연장·야간·휴일 근무시간 기준 법정 가산수당을 계산합니다.",
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "All",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      }) }} />
+            <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
   );

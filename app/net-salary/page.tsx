@@ -228,7 +228,16 @@ export default function NetSalaryPage() {
         </div>
       )}
 
-      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "급여 실수령액 계산기",
+        description: "연봉·월급에서 4대보험·소득세 공제 후 실수령액을 계산합니다.",
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "All",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      }) }} />
+            <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
   );

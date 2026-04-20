@@ -138,7 +138,16 @@ export default function AnnualLeavePage() {
         </div>
       </section>
 
-      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "연차 계산기",
+        description: "입사일 기준 근로기준법 연차 발생일수를 자동 계산합니다.",
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "All",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      }) }} />
+            <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
   );
