@@ -12,14 +12,43 @@ const RATES = {
   employmentInsurance: 0.009,   // 고용보험 0.9%
 };
 
-// 간이세액표 근사치 (월 소득 구간별 소득세율)
-function estimateIncomeTax(monthlyGross: number): number {
-  if (monthlyGross <= 1060000) return 0;
-  if (monthlyGross <= 1500000) return Math.round((monthlyGross - 1060000) * 0.06);
-  if (monthlyGross <= 3000000) return Math.round(26400 + (monthlyGross - 1500000) * 0.15);
-  if (monthlyGross <= 4500000) return Math.round(251400 + (monthlyGross - 3000000) * 0.15);
-  if (monthlyGross <= 8700000) return Math.round(476400 + (monthlyGross - 4500000) * 0.24);
-  return Math.round(1484400 + (monthlyGross - 8700000) * 0.35);
+// 2025년 근로소득 간이세액표 정식 계산
+// 국세청 간이세액표와 동일한 로직: 근로소득공제 → 인적공제 → 누진세 → 세액공제
+
+function earnedIncomeDeduction(annual: number): number {
+  if (annual <= 5_000_000) return Math.round(annual * 0.7);
+  if (annual <= 15_000_000) return 3_500_000 + Math.round((annual - 5_000_000) * 0.4);
+  if (annual <= 45_000_000) return 7_500_000 + Math.round((annual - 15_000_000) * 0.15);
+  if (annual <= 100_000_000) return 12_000_000 + Math.round((annual - 45_000_000) * 0.05);
+  return 14_750_000;
+}
+
+function progressiveTax(taxable: number): number {
+  if (taxable <= 0) return 0;
+  if (taxable <= 14_000_000) return Math.round(taxable * 0.06);
+  if (taxable <= 50_000_000) return 840_000 + Math.round((taxable - 14_000_000) * 0.15);
+  if (taxable <= 88_000_000) return 6_240_000 + Math.round((taxable - 50_000_000) * 0.24);
+  if (taxable <= 150_000_000) return 15_360_000 + Math.round((taxable - 88_000_000) * 0.35);
+  if (taxable <= 300_000_000) return 37_060_000 + Math.round((taxable - 150_000_000) * 0.38);
+  return 94_060_000 + Math.round((taxable - 300_000_000) * 0.4);
+}
+
+function earnedTaxCredit(grossTax: number, annual: number): number {
+  const credit = grossTax <= 1_300_000
+    ? Math.round(grossTax * 0.55)
+    : 715_000 + Math.round((grossTax - 1_300_000) * 0.3);
+  const limit = annual <= 33_000_000 ? 740_000 : annual <= 70_000_000 ? 660_000 : 500_000;
+  return Math.min(credit, limit);
+}
+
+function estimateIncomeTax(monthlyGross: number, dependents: number): number {
+  const annual = monthlyGross * 12;
+  const taxable = Math.max(0,
+    annual - earnedIncomeDeduction(annual) - 1_500_000 * dependents
+  );
+  const grossTax = progressiveTax(taxable);
+  const annualTax = Math.max(0, grossTax - earnedTaxCredit(grossTax, annual) - 130_000);
+  return Math.floor(annualTax / 12 / 100) * 100; // 100원 미만 절사
 }
 
 export default function NetSalaryPage() {
@@ -50,9 +79,8 @@ export default function NetSalaryPage() {
     const longTermCare = Math.round(health * RATES.longTermCare);
     const employment = Math.round(monthlyGross * RATES.employmentInsurance);
 
-    // 소득세 (부양가족 공제 반영: 1인당 약 12.5만원 비과세)
-    const taxableBase = Math.max(0, monthlyGross - (dependents - 1) * 125000);
-    const incomeTax = estimateIncomeTax(taxableBase);
+    // 소득세: 2025년 간이세액표 정식 계산 (근로소득공제·세액공제 반영)
+    const incomeTax = estimateIncomeTax(monthlyGross, dependents);
     const localTax = Math.round(incomeTax * 0.1); // 지방소득세 10%
 
     const totalDeduction = pension + health + longTermCare + employment + incomeTax + localTax;
@@ -195,7 +223,7 @@ export default function NetSalaryPage() {
             )}
           </div>
           <p className="text-xs text-zinc-500 mt-4">
-            * 2025년 기준 요율 적용. 간이세액표 근사치이며 실제 금액과 차이가 있을 수 있습니다.
+            * 2025년 근로소득 간이세액표 기준 (근로소득공제·세액공제 반영). 비과세 수당·상여 포함 시 실제와 소폭 차이 날 수 있습니다.
           </p>
         </div>
       )}
