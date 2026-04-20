@@ -129,7 +129,6 @@ export default function RootLayout({
               <a href="https://auction-calc.vercel.app" className="hover:text-zinc-600">경매 계산기</a>
               <a href="https://tax-calc-five.vercel.app" className="hover:text-zinc-600">세금 계산기</a>
               <a href="https://realtrade-alert.vercel.app" className="hover:text-zinc-600">실거래가 알림</a>
-              <a href="https://unsehanip.vercel.app" className="hover:text-zinc-600">운세한입</a>
             </div>
             <p>운영: 온기획(ON) | 이메일: js4yj@naver.com</p>
           </div>
