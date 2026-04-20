@@ -228,7 +228,7 @@ export default function NetSalaryPage() {
         </div>
       )}
 
-      <KakaoAdFit unit="DAN-XXXXXXXXXX" width={320} height={100} />
+      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
       <CoupangBanner />
     </>
   );
