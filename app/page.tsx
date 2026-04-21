@@ -1,4 +1,6 @@
 import Link from "next/link";
+import KakaoAdFit from "@/components/KakaoAdFit";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 const CALCULATORS = [
   {
@@ -78,6 +80,8 @@ export default function Home() {
         ))}
       </div>
 
+      <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+
       {/* 안내 */}
       <section className="mt-8 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-5">
         <h3 className="font-bold text-sm mb-3">이런 분께 추천해요</h3>
@@ -88,6 +92,8 @@ export default function Home() {
           <li>야근·휴일 수당이 제대로 나오는지 확인하고 싶은 분</li>
         </ul>
       </section>
+
+      <CoupangBanner />
     </>
   );
 }
