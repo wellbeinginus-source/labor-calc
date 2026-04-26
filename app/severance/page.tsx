@@ -3,6 +3,7 @@
 import { useState } from "react";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LaborConsultCTA from "@/components/LaborConsultCTA";
 
 export default function SeverancePage() {
   const [startDate, setStartDate] = useState("");
@@ -133,6 +134,8 @@ export default function SeverancePage() {
         </div>
       )}
 
+
+      <LaborConsultCTA calc="severance" />
 
       <section className="mt-12 mb-4">
         <h2 className="text-xl font-bold mb-4">퇴직금 FAQ</h2>

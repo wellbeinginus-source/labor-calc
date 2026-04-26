@@ -3,6 +3,7 @@
 import { useState } from "react";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LaborConsultCTA from "@/components/LaborConsultCTA";
 
 export default function OvertimePage() {
   const [hourlyWage, setHourlyWage] = useState("");
@@ -190,6 +191,8 @@ export default function OvertimePage() {
         </div>
       </section>
 
+
+      <LaborConsultCTA calc="overtime" />
 
       <section className="mt-12 mb-4">
         <h2 className="text-xl font-bold mb-4">연장·야간·휴일수당 FAQ</h2>

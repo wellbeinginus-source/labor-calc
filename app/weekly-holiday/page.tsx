@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import KakaoAdFit from "@/components/KakaoAdFit";
+import LaborConsultCTA from "@/components/LaborConsultCTA";
 import { CoupangBanner } from "@/components/CoupangBanner";
 
 export default function WeeklyHolidayPage() {
@@ -130,6 +131,8 @@ export default function WeeklyHolidayPage() {
         </div>
       )}
 
+
+      <LaborConsultCTA calc="weekly-holiday" />
 
       <section className="mt-12 mb-4">
         <h2 className="text-xl font-bold mb-4">주휴수당 FAQ</h2>
