@@ -3,6 +3,7 @@
 import { useState } from "react";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LaborConsultCTA from "@/components/LaborConsultCTA";
 
 // 2025년 기준 요율
 const RATES_2025 = {
@@ -172,6 +173,7 @@ export default function InsurancePage() {
       }) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "4대보험 요율은 매년 바뀌나요?", "acceptedAnswer": {"@type": "Answer", "text": "매년 정부 고시로 결정됩니다. 2026년 기준 국민연금 4.5%, 건강보험 3.545%, 고용보험 0.9%입니다."}}, {"@type": "Question", "name": "국민연금 상한액은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 기준 국민연금 보험료 부과 기준 상한 소득은 월 617만원입니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <LaborConsultCTA calc="insurance" />
       <CoupangBanner />
     </>
   );

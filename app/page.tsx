@@ -4,28 +4,28 @@ import { CoupangBanner } from "@/components/CoupangBanner";
 
 const CALCULATORS = [
   {
-    href: "/severance",
-    title: "퇴직금 계산기",
-    desc: "입사일·퇴사일·평균임금으로 법정 퇴직금 계산",
-    color: "bg-emerald-600",
-  },
-  {
     href: "/net-salary",
     title: "실수령액 계산기",
     desc: "연봉·월급에서 4대보험·소득세 공제 후 실수령액",
     color: "bg-blue-600",
   },
   {
-    href: "/annual-leave",
-    title: "연차 계산기",
-    desc: "입사일 기준 법정 연차 일수 자동 계산",
-    color: "bg-violet-600",
+    href: "/severance",
+    title: "퇴직금 계산기",
+    desc: "입사일·퇴사일·평균임금으로 법정 퇴직금 계산",
+    color: "bg-emerald-600",
   },
   {
     href: "/insurance",
     title: "4대보험 계산기",
     desc: "국민연금·건강보험·고용보험·산재보험 근로자·사업주 부담금",
     color: "bg-orange-600",
+  },
+  {
+    href: "/annual-leave",
+    title: "연차 계산기",
+    desc: "입사일 기준 법정 연차 일수 자동 계산",
+    color: "bg-violet-600",
   },
   {
     href: "/weekly-holiday",

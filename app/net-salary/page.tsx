@@ -3,6 +3,7 @@
 import { useState } from "react";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LaborConsultCTA from "@/components/LaborConsultCTA";
 
 // 2025년 기준 요율
 const RATES = {
@@ -261,6 +262,7 @@ export default function NetSalaryPage() {
       }) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "4대보험이란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "국민연금(4.5%), 건강보험(3.545%), 장기요양보험, 고용보험(0.9%)입니다. 직장인은 회사와 절반씩 부담합니다."}}, {"@type": "Question", "name": "부양가족 수에 따라 세금이 달라지나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 부양가족 1인당 연 150만원의 인적공제가 적용되어 소득세가 줄어듭니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <LaborConsultCTA calc="net-salary" />
       <CoupangBanner />
     </>
   );

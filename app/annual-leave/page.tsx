@@ -3,6 +3,7 @@
 import { useState } from "react";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LaborConsultCTA from "@/components/LaborConsultCTA";
 
 interface LeaveResult {
   yearsWorked: number;
@@ -171,6 +172,7 @@ export default function AnnualLeavePage() {
       }) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "입사 첫 해에도 연차가 생기나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 1개월 개근 시 1일의 유급휴가가 발생합니다. 1년 미만 최대 11일까지 쌓입니다."}}, {"@type": "Question", "name": "1년 개근하면 연차가 며칠인가요?", "acceptedAnswer": {"@type": "Answer", "text": "1년 이상 근무 시 15일, 3년 이상부터 2년마다 1일씩 추가되어 최대 25일입니다."}}]}) }} />
             <KakaoAdFit unit="DAN-GrFB4TR5eJgi0FM1" width={320} height={100} />
+      <LaborConsultCTA calc="annual-leave" />
       <CoupangBanner />
     </>
   );

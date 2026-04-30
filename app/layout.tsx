@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 const NAV_ITEMS = [
-  { href: "/severance", label: "퇴직금" },
   { href: "/net-salary", label: "실수령액" },
-  { href: "/annual-leave", label: "연차" },
+  { href: "/severance", label: "퇴직금" },
   { href: "/insurance", label: "4대보험" },
+  { href: "/annual-leave", label: "연차" },
   { href: "/weekly-holiday", label: "주휴수당" },
   { href: "/overtime", label: "연장·야간·휴일" },
 ];
